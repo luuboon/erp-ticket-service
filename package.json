@@ -1,0 +1,25 @@
+{
+  "name": "erp-ticket-service",
+  "version": "1.0.0",
+  "description": "Ticket microservice for ERP-SDA",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@fastify/sensible": "^5.6.0",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.28.1",
+    "pg": "^8.12.0",
+    "pino-pretty": "^11.3.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/pg": "^8.11.6",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0"
+  }
+}
