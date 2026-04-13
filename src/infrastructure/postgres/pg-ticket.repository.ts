@@ -101,8 +101,8 @@ export class PgTicketRepository extends TicketRepository {
 
     // Registrar historial de cambios
     for (const [key] of Object.entries(fieldMap)) {
-      const newVal = (changes as Record<string, unknown>)[key];
-      const oldVal = (existing as Record<string, unknown>)[key];
+      const newVal = (changes as unknown as Record<string, unknown>)[key];
+      const oldVal = (existing as unknown as Record<string, unknown>)[key];
       if (newVal !== undefined && String(newVal) !== String(oldVal)) {
         await this.pool.query(`
           INSERT INTO ticket_history (ticket_id, field, old_value, new_value, changed_by)
